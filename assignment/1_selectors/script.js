@@ -14,7 +14,7 @@ var onReady = function(e, complete) { // ignore e, use complete when specified b
     $("#step-two").css("background-color", "yellow");
   // 3 - fade example-list elements to an opacity of 0.4
   // use complete as the last argument to the jQuery fade function
-    $("example-list").fadeOut(0.4, complete);
+    $("example-list").fadeToggle(0.4, complete);
   // 4 - Select all of the odd-numbered list items and
   // change their text color to blue
   // HINT: look up .css() to access an element's css properties

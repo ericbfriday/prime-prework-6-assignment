@@ -30,7 +30,7 @@ function fadeCat(e, complete) { // ignore e, use complete as the last argument t
   //TODO your function code here
   // toggle catImg fade
   // append '<p>fade toggle</p>' to 'clickList'
-  $('#catImg').fadeToggle('slow');
+  $('#catImg').fadeToggle(complete);
   $('#clickList').append('<p>fade toggle</p>');
 }
 
@@ -48,7 +48,7 @@ function animateCat(e, complete) { // ignore e, use complete as the last argumen
   //TODO your function code here
   // animate catImg
   // append '<p>animate</p>' to 'clickList'
-  $('#catImg').animate({height: '+=10px', width: '+=10px'});
+  $('#catImg').animate({height: '+=10px', width: '+=10px'}, complete);
   $('#clickList').append('<p>animate</p>');
 }
 
@@ -58,7 +58,6 @@ function animateCat(e, complete) { // ignore e, use complete as the last argumen
 function resetCat() {
   // reset catImg
   // append '<p>reset</p>' to 'clickList'
-  $('#catImg').show();
-  $('#catImg').animate({height: '162px', width: '216px'});
+  $('#catImg').removeAttr('style');
   $('#clickList').append('<p>reset</p>');
 }
